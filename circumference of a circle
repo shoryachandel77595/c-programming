@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    float radius, circum;
+
+    printf("Enter radius: ");
+    scanf("%f", &radius);
+
+    circum = 2 * (22.0 / 7) * radius;
+
+    printf("Radius = %.2f\n", radius);
+    printf("Circumference = %.2f\n", circum);
+
+    return 0;
+}
