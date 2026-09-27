@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int hundreds, tens, ones;
+
+    printf("Enter a 3-digit integer: ");
+    scanf("%d", &n);
+
+    hundreds = n / 100;
+    tens = (n / 10) % 10;
+    ones = n % 10;
+
+    printf("%d %d %d\n", hundreds, tens, ones);
+
+    return 0;
+}
