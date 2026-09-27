@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, octal[32], i = 0;
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+
+    if (n == 0)
+    {
+        printf("Octal = 0");
+        return 0;
+    }
+
+    while (n > 0)
+    {
+        octal[i] = n % 8;
+        n = n / 8;
+        i++;
+    }
+
+    printf("Octal = ");
+
+    for (i = i - 1; i >= 0; i--)
+    {
+        printf("%d", octal[i]);
+    }
+
+    return 0;
+}
