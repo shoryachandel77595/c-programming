@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int binary, decimal = 0;
+    int base = 1;
+    int remainder;
+    int octal[32], i = 0;
+
+    printf("Enter a binary number: ");
+    scanf("%d", &binary);
+
+    /* Binary to Decimal */
+
+    while (binary > 0)
+    {
+        remainder = binary % 10;
+
+        decimal = decimal + remainder * base;
+
+        base = base * 2;
+
+        binary = binary / 10;
+    }
+
+    /* Decimal to Octal */
+
+    while (decimal > 0)
+    {
+        octal[i] = decimal % 8;
+        decimal = decimal / 8;
+        i++;
+    }
+
+    printf("Octal = ");
+
+    for (i = i - 1; i >= 0; i--)
+    {
+        printf("%d", octal[i]);
+    }
+
+    return 0;
+}  
