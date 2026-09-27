@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    unsigned int unsignedNumber;
+    char character;
+    float decimal;
+
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    printf("Enter an unsigned integer: ");
+    scanf("%u", &unsignedNumber);
+
+    printf("Enter a character: ");
+    scanf(" %c", &character);
+
+    printf("Enter a decimal number: ");
+    scanf("%f", &decimal);
+
+    printf("\nInteger = %d\n", number);
+    printf("Unsigned integer = %u\n", unsignedNumber);
+    printf("Character = %c\n", character);
+    printf("Float = %f\n", decimal);
+
+    return 0;
+}
