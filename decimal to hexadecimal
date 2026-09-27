@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, remainder;
+    char hexadecimal[32];
+    int i = 0;
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+
+    if (n == 0)
+    {
+        printf("Hexadecimal = 0");
+        return 0;
+    }
+
+    while (n > 0)
+    {
+        remainder = n % 16;
+
+        if (remainder < 10)
+            hexadecimal[i] = remainder + '0';
+        else
+            hexadecimal[i] = remainder - 10 + 'A';
+
+        n = n / 16;
+        i++;
+    }
+
+    printf("Hexadecimal = ");
+
+    for (i = i - 1; i >= 0; i--)
+    {
+        printf("%c", hexadecimal[i]);
+    }
+
+    return 0;
+}
